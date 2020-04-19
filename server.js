@@ -3,6 +3,10 @@ const app = express();
 
 const connectDB = require('./config/db');
 
+//Middleware
+
+app.use(express.json({ extended: false }));
+
 connectDB();
 
 app.get('/', (req, res) => res.send('API chalu hai mama'));
