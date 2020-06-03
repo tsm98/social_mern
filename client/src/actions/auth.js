@@ -6,12 +6,14 @@ import {
   USER_LOADED,
   AUTH_ERROR,
 } from './types';
-import setAuthToken from '../utils/setAuthToken';
+import api from '../utils/api';
+//import setAuthToken from '../utils/setAuthToken';
 
+// Load User
 export const loadUser = () => async (dispatch) => {
-  if (localStorage.token) setAuthToken(localStorage.token);
   try {
-    const res = await axios.get('/api/auth');
+    const res = await api.get('/auth');
+
     dispatch({
       type: USER_LOADED,
       payload: res.data,
