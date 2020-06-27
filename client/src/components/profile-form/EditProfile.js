@@ -45,7 +45,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? '' : profile.social.youtube,
       instagram: loading || !profile.social ? '' : profile.social.instagram,
     });
-  }, [loading, getCurrentProfile, profile.website]);
+  }, [loading, getCurrentProfile]);
 
   const {
     company,
@@ -255,5 +255,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { createProfile, getCurrentProfile })(
-  EditProfile
+  withRouter(EditProfile)
 );
