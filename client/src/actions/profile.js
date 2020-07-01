@@ -66,7 +66,8 @@ export const getProfileById = (userId) => async (dispatch) => {
 //get github repos
 export const getGithubRepos = (username) => async (dispatch) => {
   try {
-    const res = api.get(`/profile/github/${username}`);
+    const res = await api.get(`/profile/github/${username}`);
+
     dispatch({
       type: GET_REPOS,
       payload: res.data,
@@ -78,7 +79,6 @@ export const getGithubRepos = (username) => async (dispatch) => {
     });
   }
 };
-
 //create or update a profile
 export const createProfile = (formData, history, edit = false) => async (
   dispatch
