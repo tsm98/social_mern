@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://tushar:Tushar_1206@social-app-qnucx.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "68e46ea57d5014149200",
+  "githubSecret": "54fc120ec797db1e9da157d147309fa3bf42eb55"
+}
